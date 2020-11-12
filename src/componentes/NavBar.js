@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    textAlign: "center",
   },
 }));
 
@@ -38,7 +39,6 @@ export default function NavBar() {
               <MenuIcon />
             </IconButton>
           </Link>
-
           <Typography variant="h6" className={classes.title}>
             DeHeus
           </Typography>

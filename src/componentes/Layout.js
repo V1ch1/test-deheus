@@ -6,7 +6,8 @@ import {
   Route,
   useRouteMatch,
 } from "react-router-dom";
-import Login from "../componentes/Login";
+import Login from "../componentes/login/Login";
+import TitleProduct from "../componentes/TitleProduct";
 
 const Layout = () => {
   let { path, url } = useRouteMatch();
@@ -16,16 +17,17 @@ const Layout = () => {
       <NavBar />
       <body>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/informacion">
             Información
+            <TitleProduct />
           </Route>
-          <Route exact path="/Trazabilidad">
+          <Route exact path="/trazabilidad">
             Trazabilidad
           </Route>
-          <Route exact path="/Histórico de compra">
+          <Route exact path="/historico">
             Histórico de Compra
           </Route>
-          <Route exact path="/Login">
+          <Route exact path="/login">
             <Login />
           </Route>
         </Switch>
