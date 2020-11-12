@@ -25,57 +25,56 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={printValues}>
-      <div className="global-container">
-        <div className="row">
-          <div className="col-sm-12">
-            {" "}
-            <img src={deHeus} alt="..." className="imgDeHeus" />
+    <>
+      <form onSubmit={printValues}>
+        <div className="global-container">
+          <div className="row">
+            <div className="col-sm-12">
+              {" "}
+              <img src={deHeus} alt="..." className="imgDeHeus" />
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-sm-12">
-            <InputLogin
-              textLabel="Usuario"
-              type="text"
-              id="userNameField"
-              value={form.username}
-              name="username"
-              onChange={updateField}
-            />
-          </div>
-          <div className="col-sm-12">
-            <InputLogin
-              textLabel="Contraseña"
-              value={form.password}
-              name="password"
-              type="password"
-              onChange={updateField}
-              id="password"
-            />
-          </div>
+          <div className="row ">
+            <div className="col-sm-12 ">
+              <InputLogin
+                className="inputLogin"
+                textLabel="Usuario"
+                type="text"
+                id="userNameField"
+                value={form.username}
+                name="username"
+                onChange={updateField}
+              />
+            </div>
+            <div className="col-sm-12 ">
+              <InputLogin
+                className="inputLogin"
+                textLabel="Contraseña"
+                value={form.password}
+                name="password"
+                type="password"
+                onChange={updateField}
+                id="password"
+              />
+            </div>
 
-          <div className="col-sm-12">
-            <button
-              className="btn btn-success btn-block mt-3"
-              style={{ backgroundColor: "#96C11F", borderColor: "#96C11F" }}
-            >
-              Entrar
-            </button>
+            <div className="col-sm-12">
+              <button
+                className="btn btn-success btn-block my-3"
+                style={{ backgroundColor: "#96C11F", borderColor: "#96C11F" }}
+              >
+                Entrar
+              </button>
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-sm-12">
-            {" "}
-            <img
-              src={vaquita}
-              alt="..."
-              style={{ marginTop: 100, marginTop: 140 }}
-            />
-          </div>
+      </form>
+      <div className="row fixed-bottom ">
+        <div className="col-sm-12">
+          <img src={vaquita} alt="..." className="imgFooter" />
         </div>
       </div>
-    </form>
+    </>
   );
 };
 

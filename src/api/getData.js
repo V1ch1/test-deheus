@@ -1,10 +1,9 @@
+import { REACT_APP_API_KEY } from "../constants/constants";
 import apiError from "./apiError";
 
 const getData = async () => {
   try {
-    const response = await fetch(
-      "https://hub-inmobiliaria.netlify.app/inmuebles.json"
-    );
+    const response = await fetch(REACT_APP_API_KEY);
     if (!response.ok) {
       throw new apiError(400, "No se encontraron datos");
     }
